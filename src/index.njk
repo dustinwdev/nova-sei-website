@@ -23,7 +23,6 @@ title: Professional Publishing Services
     <div class="container">
         <div class="section-header">
             <h2 class="section-title">About Nova Sei Press</h2>
-            <p class="section-subtitle">Your partner in bringing literary visions to life</p>
         </div>
         <div class="about-grid">
             <div class="about-content">
@@ -91,7 +90,7 @@ title: Professional Publishing Services
             <h2 class="section-title">Get In Touch</h2>
             <p class="section-subtitle">Ready to bring your vision to life? Let's start the conversation.</p>
         </div>
-        <form class="contact-form" action="#" method="POST">
+        <form class="contact-form" action="https://submit-form.com/pOKRa1Tjy" method="POST">
             <div class="form-group">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" id="name" name="name" class="form-input" required>
@@ -104,6 +103,27 @@ title: Professional Publishing Services
                 <label for="message" class="form-label">Message</label>
                 <textarea id="message" name="message" class="form-textarea" required></textarea>
             </div>
+            <!-- Config Fields -->
+            <input
+                type="checkbox"
+                name="accept_terms"
+                style="display:none"
+                tabindex="-1"
+                autocomplete="off"
+            />
+            <!-- Redirects -->
+            <input
+                type="hidden"
+                name="_redirect"
+                value="https://novaseipress.com/success"
+            />
+            <input
+                type="hidden"
+                name="_error"
+                value="https://novaseipress.com/error"
+            />
+            <!-- Disable appending values on redirect -->
+            <input type="hidden" name="_append" value="false" />
             <button type="submit" class="btn btn-primary form-button">Send</button>
         </form>
     </div>
