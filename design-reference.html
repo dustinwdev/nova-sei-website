@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Sei Press - Design Reference</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafafa;
+            padding: 3rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: #5B3A8F;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: #666;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .color-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .color-swatch {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        .color-info {
+            padding: 1rem;
+            background: #fafafa;
+        }
+
+        .color-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .color-usage {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            color: #999;
+        }
+
+        /* Typography */
+        .type-specimen {
+            margin-bottom: 3rem;
+        }
+
+        .font-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #5B3A8F;
+        }
+
+        .font-usage {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .type-scale {
+            border-left: 3px solid #D4AF37;
+            padding-left: 2rem;
+        }
+
+        .type-example {
+            margin-bottom: 1.5rem;
+        }
+
+        .type-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+
+        .heading-display {
+            font-family: 'Lora', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .heading-1 {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+
+        .heading-2 {
+            font-family: 'Lora', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
+
+        .heading-3 {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
+
+        .body-large {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .body-regular {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .body-small {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Design Principles */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .principle-card {
+            padding: 2rem;
+            background: #fafafa;
+            border-radius: 8px;
+            border-left: 4px solid #D4AF37;
+        }
+
+        .principle-title {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #5B3A8F;
+            margin-bottom: 0.75rem;
+        }
+
+        .principle-desc {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Example Components */
+        .component-showcase {
+            margin-top: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #5B3A8F;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(91, 58, 143, 0.2);
+        }
+
+        .cta-button:hover {
+            background: #4A2E73;
+            box-shadow: 0 6px 16px rgba(91, 58, 143, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .cta-button-secondary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: #5B3A8F;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid #5B3A8F;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: none;
+        }
+
+        .cta-button-secondary:hover {
+            background: #5B3A8F;
+            color: white;
+            box-shadow: 0 4px 12px rgba(91, 58, 143, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .component-demo {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nova Sei Press</h1>
+        <p class="subtitle">Design System & Visual Identity</p>
+
+        <!-- Color Palette Section -->
+        <section class="section">
+            <h2 class="section-title">Color Palette</h2>
+            <p class="body-regular">A refined palette that balances sophistication with warmth. The deep royal purple conveys trust and creativity, while the golden accent adds prestige. The expanded neutrals provide flexibility for layouts.</p>
+
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #5B3A8F;">Primary</div>
+                    <div class="color-info">
+                        <div class="color-name">Royal Purple</div>
+                        <div class="color-usage">Primary brand color, headings, CTAs</div>
+                        <div class="color-hex">#5B3A8F</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #4A2E73;">Dark Purple</div>
+                    <div class="color-info">
+                        <div class="color-name">Deep Purple</div>
+                        <div class="color-usage">Hover states, emphasis</div>
+                        <div class="color-hex">#4A2E73</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #D4AF37;">Accent</div>
+                    <div class="color-info">
+                        <div class="color-name">Antique Gold</div>
+                        <div class="color-usage">Accents, highlights, dividers</div>
+                        <div class="color-hex">#D4AF37</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #1a1a1a; color: white;">Text</div>
+                    <div class="color-info">
+                        <div class="color-name">Charcoal</div>
+                        <div class="color-usage">Primary text, headers</div>
+                        <div class="color-hex">#1a1a1a</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #666; color: white;">Secondary</div>
+                    <div class="color-info">
+                        <div class="color-name">Slate Gray</div>
+                        <div class="color-usage">Secondary text, captions</div>
+                        <div class="color-hex">#666666</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #ffffff; border: 1px solid #e0e0e0; color: #1a1a1a;">Background</div>
+                    <div class="color-info">
+                        <div class="color-name">Pure White</div>
+                        <div class="color-usage">Cards, sections, content blocks</div>
+                        <div class="color-hex">#FFFFFF</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #fafafa; border: 1px solid #e0e0e0; color: #1a1a1a;">Base</div>
+                    <div class="color-info">
+                        <div class="color-name">Off-White</div>
+                        <div class="color-usage">Page background, subtle contrast</div>
+                        <div class="color-hex">#FAFAFA</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #f0f0f0; border: 1px solid #e0e0e0; color: #1a1a1a;">Border</div>
+                    <div class="color-info">
+                        <div class="color-name">Light Gray</div>
+                        <div class="color-usage">Borders, dividers, subtle elements</div>
+                        <div class="color-hex">#F0F0F0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section class="section">
+            <h2 class="section-title">Typography</h2>
+
+            <div class="type-specimen">
+                <div class="font-name">Lora</div>
+                <div class="font-usage">Serif — Headings, hero text, section titles</div>
+                <p class="body-regular">A contemporary serif that's highly readable with brushed curves and moderate contrast. Designed specifically for screen readability while maintaining elegance. Perfect for a publishing house that values both tradition and modernity.</p>
+
+                <div class="type-scale">
+                    <div class="type-example">
+                        <div class="type-label">Display / Hero</div>
+                        <div class="heading-display">Crafting Stories That Last</div>
+                    </div>
+                    <div class="type-example">
+                        <div class="type-label">Heading 1</div>
+                        <div class="heading-1">Professional Publishing Services</div>
+                    </div>
+                    <div class="type-example">
+                        <div class="type-label">Heading 2</div>
+                        <div class="heading-2">Bringing Your Vision to Life</div>
+                    </div>
+                    <div class="type-example">
+                        <div class="type-label">Heading 3</div>
+                        <div class="heading-3">Our Approach to Excellence</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="type-specimen">
+                <div class="font-name">Inter</div>
+                <div class="font-usage">Sans-serif — Body text, navigation, UI elements</div>
+                <p class="body-regular">A modern, highly legible sans-serif designed specifically for screens. Provides excellent readability at all sizes while maintaining a clean, professional appearance.</p>
+
+                <div class="type-scale">
+                    <div class="type-example">
+                        <div class="type-label">Body Large / Lead</div>
+                        <div class="body-large">Nova Sei Press partners with authors to transform manuscripts into polished, professionally published works. Our comprehensive services cover every step of the publishing journey.</div>
+                    </div>
+                    <div class="type-example">
+                        <div class="type-label">Body Regular</div>
+                        <div class="body-regular">Whether you're a first-time author or a seasoned writer, we provide personalized support tailored to your unique needs and goals. Our team of experienced editors and publishing consultants brings decades of industry expertise to every project.</div>
+                    </div>
+                    <div class="type-example">
+                        <div class="type-label">Body Small / Caption</div>
+                        <div class="body-small">Available for projects of all sizes • Flexible timelines to match your schedule • Professional quality guaranteed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Principles Section -->
+        <section class="section">
+            <h2 class="section-title">Design Principles</h2>
+
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <div class="principle-title">Spacious & Light</div>
+                    <p class="principle-desc">Generous whitespace and breathing room create a sense of calm professionalism. Content never feels cramped or overwhelming.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-title">Warm & Trustworthy</div>
+                    <p class="principle-desc">The color palette and typography work together to feel both professional and approachable, building confidence without intimidation.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-title">Refined Simplicity</div>
+                    <p class="principle-desc">Clean layouts without unnecessary decoration. Every element serves a purpose, avoiding cookie-cutter template feels.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-title">Smooth Interactions</div>
+                    <p class="principle-desc">Subtle transitions and smooth scrolling create a polished, intentional experience that feels crafted, not rushed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Component Examples Section -->
+        <section class="section">
+            <h2 class="section-title">Component Examples</h2>
+            <p class="body-regular">Preview of how design elements come together in actual components.</p>
+
+            <div class="component-showcase">
+                <div class="type-label">Call-to-Action Buttons</div>
+                <div class="component-demo">
+                    <a href="#" class="cta-button">Get Started Today</a>
+                    <a href="#" class="cta-button-secondary">Learn More</a>
+                </div>
+            </div>
+
+            <div class="component-showcase" style="margin-top: 3rem;">
+                <div class="type-label">Service Card Example</div>
+                <div style="max-width: 500px; padding: 2rem; background: white; border-radius: 8px; border-top: 4px solid #D4AF37; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+                    <h3 style="font-family: 'Lora', serif; font-size: 1.75rem; color: #5B3A8F; margin-bottom: 1rem;">Professional Editing</h3>
+                    <p class="body-regular">Our experienced editors refine your manuscript with meticulous attention to detail, enhancing clarity, flow, and impact while preserving your unique voice.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rationale Section -->
+        <section class="section">
+            <h2 class="section-title">Design Rationale</h2>
+
+            <div style="background: #f9f9f9; padding: 2rem; border-radius: 8px; border-left: 4px solid #5B3A8F;">
+                <h3 style="font-family: 'Lora', serif; font-size: 1.5rem; color: #5B3A8F; margin-bottom: 1rem;">Why This Palette?</h3>
+                <p class="body-regular" style="margin-bottom: 1rem;">
+                    <strong>Royal Purple (#5B3A8F):</strong> Conveys creativity, wisdom, and sophistication — perfect for a publishing business. It's distinctive without being overwhelming, establishing brand recognition while maintaining professionalism.
+                </p>
+                <p class="body-regular" style="margin-bottom: 1rem;">
+                    <strong>Antique Gold (#D4AF37):</strong> Adds warmth and prestige. This muted gold feels established and trustworthy rather than flashy. It pairs beautifully with purple and provides elegant accents.
+                </p>
+                <p class="body-regular">
+                    <strong>Neutral Grays:</strong> The expanded neutral palette (charcoal to off-white) provides hierarchy and breathing room. This allows the purple and gold to make statements without overwhelming the design.
+                </p>
+            </div>
+
+            <div style="background: #f9f9f9; padding: 2rem; border-radius: 8px; border-left: 4px solid #D4AF37; margin-top: 2rem;">
+                <h3 style="font-family: 'Lora', serif; font-size: 1.5rem; color: #5B3A8F; margin-bottom: 1rem;">Why These Fonts?</h3>
+                <p class="body-regular" style="margin-bottom: 1rem;">
+                    <strong>Lora:</strong> A contemporary serif specifically optimized for screen readability. Its brushed curves and moderate contrast make it highly legible at all sizes while maintaining warmth and sophistication. Unlike traditional serifs, Lora feels modern and approachable while still honoring literary tradition.
+                </p>
+                <p class="body-regular">
+                    <strong>Inter:</strong> Exceptional readability and modern feel. It's neutral enough to let content shine while maintaining personality. Pairs perfectly with Cormorant's classical elegance, creating sophisticated contrast between headings and body text.
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

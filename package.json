@@ -1,0 +1,15 @@
+{
+  "name": "nova-sei-press-website",
+  "version": "1.0.0",
+  "description": "Static website for Nova Sei Press publishing services",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": ["11ty", "publishing", "static-site"],
+  "author": "Nova Sei Press",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

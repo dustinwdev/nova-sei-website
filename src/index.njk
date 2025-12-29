@@ -1,0 +1,122 @@
+---
+layout: base.njk
+title: Professional Publishing Services
+---
+
+<!-- Navigation -->
+<nav class="nav">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">Nova Sei Press</a>
+
+        <!-- Hamburger Menu Toggle (CSS only) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li><a href="#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">About</a></li>
+            <li><a href="#services" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Services</a></li>
+            <li><a href="#contact" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Crafting Stories That Last</h1>
+            <p class="lead-text">Transform your manuscript into a polished, professionally published work with our comprehensive editing and publishing services.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Get Started Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">About Nova Sei Press</h2>
+            <p class="section-subtitle">Your partner in bringing literary visions to life</p>
+        </div>
+        <div class="about-content">
+            <p class="lead-text">Nova Sei Press partners with authors to transform manuscripts into polished, professionally published works. Our comprehensive services cover every step of the publishing journey, from initial manuscript review to final publication.</p>
+
+            <div class="about-highlight">
+                <p>Whether you're a first-time author or a seasoned writer, we provide personalized support tailored to your unique needs and goals. Our team of experienced editors and publishing consultants brings decades of industry expertise to every project, ensuring your work receives the attention and care it deserves.</p>
+                <p style="margin-bottom: 0;">We believe that every story deserves to be told with clarity, precision, and impact. Our mission is to help authors navigate the complexities of publishing while maintaining their authentic voice and creative vision.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive publishing solutions tailored to your needs</p>
+        </div>
+        <div class="services-grid">
+            <!-- Proofreading -->
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>Proofreading</h3>
+                <p>Meticulous error correction in grammar, spelling, punctuation, and formatting. We catch the details that others miss, polishing your work to perfection while preserving your unique voice.</p>
+            </div>
+
+            <!-- Editing -->
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Professional Editing</h3>
+                <p>Comprehensive editing that enhances clarity, flow, and impact. From developmental feedback to line-by-line refinement, we elevate your manuscript while maintaining your creative vision.</p>
+            </div>
+
+            <!-- Self-Publishing Consulting -->
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>Self-Publishing Consultation</h3>
+                <p>Expert guidance through the self-publishing process. From platform selection and formatting to ISBN registration and distribution, we help you make informed decisions at every step.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to bring your vision to life? Let's start the conversation.</p>
+        </div>
+        <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-textarea" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-button">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2025 Nova Sei Press. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
