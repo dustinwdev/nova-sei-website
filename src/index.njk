@@ -3,33 +3,14 @@ layout: base.njk
 title: Professional Publishing Services
 ---
 
-<!-- Navigation -->
-<nav class="nav">
-    <div class="nav-container">
-        <a href="#" class="nav-logo">Nova Sei Press</a>
-
-        <!-- Hamburger Menu Toggle (CSS only) -->
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-hamburger">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </label>
-
-        <ul class="nav-menu">
-            <li><a href="#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">About</a></li>
-            <li><a href="#services" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Services</a></li>
-            <li><a href="#contact" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+{% include "header.njk" %}
 
 <!-- Hero Section -->
 <section id="home" class="hero">
     <div class="container">
         <div class="hero-content">
-            <h1>Crafting Stories That Last</h1>
-            <p class="lead-text">Transform your manuscript into a polished, professionally published work with our comprehensive editing and publishing services.</p>
+            <h1>We Help Bring Your Vision to Life</h1>
+            <p class="lead-text">Expert editing and publishing guidance to help authors create polished, professional works that captivate readers.</p>
             <div class="hero-cta">
                 <a href="#contact" class="btn btn-primary">Get Started Today</a>
             </div>
@@ -49,14 +30,18 @@ title: Professional Publishing Services
                 <h3 class="about-subheading">Your Partner in Publishing</h3>
                 <p class="about-intro">Nova Sei Press partners with authors to transform manuscripts into polished, professionally published works. Our comprehensive services cover every step of the publishing journey, from initial manuscript review to final publication.</p>
 
-                <div class="about-features">
-                    <div class="about-feature">
-                        <h4 class="feature-title">Personalized Support</h4>
-                        <p class="feature-text">Whether you're a first-time author or a seasoned writer, we provide tailored guidance that fits your unique needs and goals.</p>
+                <div class="about-cards">
+                    <div class="about-card">
+                        <h4 class="about-card-title">Personalized Support</h4>
+                        <p class="about-card-text">Whether you're a first-time author or a seasoned writer, we provide tailored guidance that fits your unique needs and goals.</p>
                     </div>
-                    <div class="about-feature">
-                        <h4 class="feature-title">Your Voice, Amplified</h4>
-                        <p class="feature-text">We help you tell your story with clarity, precision, and impact while preserving your authentic voice and creative vision.</p>
+                    <div class="about-card">
+                        <h4 class="about-card-title">Your Voice, Amplified</h4>
+                        <p class="about-card-text">We help you tell your story with clarity, precision, and impact while preserving your authentic voice and creative vision.</p>
+                    </div>
+                    <div class="about-card">
+                        <h4 class="about-card-title">Quality First</h4>
+                        <p class="about-card-text">Every project receives meticulous attention to detail, ensuring your work meets the highest professional publishing standards.</p>
                     </div>
                 </div>
             </div>
@@ -124,11 +109,4 @@ title: Professional Publishing Services
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <p>&copy; 2025 Nova Sei Press. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
+{% include "footer.njk" %}
