@@ -45,6 +45,9 @@ Nova Sei Press is a publishing service business that provides proofreading, edit
 - **Readable Typography**: Font sizes scale appropriately across all devices
 - **No JavaScript Required**: Pure CSS hamburger menu using checkbox technique for maximum performance
 
+## Development Guidelines
+- **Git Commits**: Do NOT commit any code unless explicitly instructed by the user
+
 ## Site Hierarchy
 Expound on each section freely with clean and professional copy, this will likely be updated later anyway. Feel free to pull in relevant stock photographs to make the design feel more cohesive and vibrant.
 
