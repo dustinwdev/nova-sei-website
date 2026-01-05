@@ -592,8 +592,8 @@ section {
 .about .section-title {
     background: linear-gradient(
         135deg,
-        var(--color-accent-light) 0%,
-        var(--color-accent) 100%
+        #c4d9d7 0%,
+        var(--color-accent-light) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1013,8 +1013,8 @@ section {
 .contact .section-title {
     background: linear-gradient(
         135deg,
-        var(--color-accent-light) 0%,
-        var(--color-accent) 100%
+        #c4d9d7 0%,
+        var(--color-accent-light) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
