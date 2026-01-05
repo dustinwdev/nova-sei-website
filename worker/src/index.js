@@ -206,7 +206,9 @@ async function handleSubmit(request, env, corsHeaders) {
     subject:
       formType === "quote"
         ? `New Quote Request from ${fullName}`
-        : `New Inquiry from ${fullName}`,
+        : formType === "review"
+          ? `New Review from ${fullName}`
+          : `New Inquiry from ${fullName}`,
     html: getNotificationEmailHtml({
       formType,
       name: fullName,

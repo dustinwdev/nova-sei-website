@@ -22,25 +22,38 @@
   if (!form) return;
 
   // Function to update form based on type selection
-  function updateFormType(isQuote) {
+  function updateFormType(formType) {
+    const isQuote = formType === "quote";
+    const isReview = formType === "review";
+
     quoteFields.hidden = !isQuote;
     quoteHint.hidden = !isQuote;
     serviceSelect.required = isQuote;
-    messageLabel.textContent = isQuote ? "Project Details" : "Message";
-    responseTime.textContent = isQuote
-      ? "Expected response: 2-5 business days"
-      : "Expected response: 1-3 business days";
+
+    if (isQuote) {
+      messageLabel.textContent = "Project Details";
+      responseTime.textContent = "Expected response: 2-5 business days";
+      responseTime.hidden = false;
+    } else if (isReview) {
+      messageLabel.textContent = "Your Review";
+      responseTime.hidden = true;
+    } else {
+      messageLabel.textContent = "Message";
+      responseTime.textContent = "Expected response: 1-3 business days";
+      responseTime.hidden = false;
+    }
   }
 
   // Check initial state on page load (handles browser remembering selection)
-  updateFormType(formTypeSelect.value === "quote");
+  updateFormType(formTypeSelect.value);
 
   // Toggle quote fields visibility on change
   formTypeSelect.addEventListener("change", function () {
-    const isQuote = this.value === "quote";
-    updateFormType(isQuote);
+    const formType = this.value;
+    const isQuote = formType === "quote";
+    updateFormType(formType);
 
-    // Reset quote-specific fields when switching to General Inquiry
+    // Reset quote-specific fields when switching away from quote
     if (!isQuote) {
       serviceSelect.value = "";
       fileInput.value = "";
