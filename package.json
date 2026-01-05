@@ -6,10 +6,17 @@
     "start": "eleventy --serve",
     "build": "eleventy"
   },
-  "keywords": ["11ty", "publishing", "static-site"],
+  "keywords": [
+    "11ty",
+    "publishing",
+    "static-site"
+  ],
   "author": "Nova Sei Press",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.57.0"
   }
 }

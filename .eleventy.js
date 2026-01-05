@@ -1,6 +1,9 @@
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Copy CSS files to output
   eleventyConfig.addPassthroughCopy("src/css");
+
+  // Copy JavaScript files to output
+  eleventyConfig.addPassthroughCopy("src/js");
 
   // Copy images to output
   eleventyConfig.addPassthroughCopy("src/images");
@@ -10,10 +13,10 @@ module.exports = function(eleventyConfig) {
       input: "src",
       output: "_site",
       includes: "_includes",
-      layouts: "_layouts"
+      layouts: "_layouts",
     },
     templateFormats: ["html", "njk", "md"],
     htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk"
+    markdownTemplateEngine: "njk",
   };
 };
