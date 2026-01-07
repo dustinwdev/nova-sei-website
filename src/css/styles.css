@@ -713,9 +713,10 @@ section {
 /* Services Section */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
+    justify-items: center;
 }
 
 .service-card {
@@ -728,6 +729,9 @@ section {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    max-width: 400px;
+    width: 100%;
 }
 
 .service-card::before {
@@ -1471,7 +1475,7 @@ section {
 
     /* Service Cards */
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
     }
 
@@ -1593,6 +1597,10 @@ section {
     }
 
     /* Service Cards */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
     .service-card {
         padding: var(--spacing-md);
     }

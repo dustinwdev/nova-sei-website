@@ -4,10 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Sei Press - Design Reference</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            /* Primary Colors */
+            --color-primary: #5b3a8f;
+            --color-primary-dark: #4a2e73;
+            --color-primary-light: #7b5aaf;
+
+            /* Accent Colors */
+            --color-accent: #7a9e9b;
+            --color-accent-light: #99b5b3;
+
+            /* Text Colors */
+            --color-text-primary: #1a1a1a;
+            --color-text-secondary: #666666;
+
+            /* Background Colors */
+            --color-background: #ffffff;
+            --color-background-base: #fafafa;
+            --color-background-dark: #2a1f3d;
+            --color-background-dark-purple: #3d2e5a;
+
+            /* Special Backgrounds */
+            --color-border: #f0f0f0;
+            --color-purple-bg: #f5f0ff;
+            --color-teal-bg: #e6faf8;
+
+            /* Status Colors */
+            --color-success: #48a14d;
+            --color-success-light: #66bb6a;
+            --color-error: #e63946;
+            --color-error-light: #f77f88;
+
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 24px rgba(91, 58, 143, 0.15);
+            --shadow-xl: 0 12px 32px rgba(91, 58, 143, 0.2);
+
+            /* Border Radius */
+            --border-radius-sm: 8px;
+            --border-radius-md: 12px;
+            --border-radius-lg: 20px;
+            --border-radius-pill: 50px;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -16,482 +58,915 @@
 
         body {
             font-family: 'Inter', sans-serif;
+            background: var(--color-background-base);
+            color: var(--color-text-primary);
             line-height: 1.6;
-            color: #1a1a1a;
-            background: #fafafa;
-            padding: 3rem 2rem;
+            -webkit-font-smoothing: antialiased;
         }
 
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--color-background-dark-purple) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Lora', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+        }
+
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 3rem 2rem;
         }
 
-        h1, h2, h3 {
-            font-family: 'Lora', serif;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 600;
-            color: #5B3A8F;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            font-size: 1.125rem;
-            color: #666;
-            margin-bottom: 3rem;
-            font-weight: 300;
-        }
-
+        /* Section */
         .section {
             background: white;
-            padding: 3rem;
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
             margin-bottom: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: var(--shadow-md);
         }
 
         .section-title {
-            font-size: 2rem;
-            color: #1a1a1a;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #f0f0f0;
+            font-family: 'Lora', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* Color Palette */
+        /* Typography Demo */
+        .typography-demo {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .font-card {
+            padding: 1.5rem;
+            background: var(--color-background-base);
+            border-radius: var(--border-radius-md);
+            border: 1px solid var(--color-border);
+        }
+
+        .font-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-secondary);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .font-lora {
+            font-family: 'Lora', serif;
+        }
+
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-sample-large {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: var(--color-text-primary);
+        }
+
+        .font-sample-medium {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .font-sample-body {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-text-secondary);
+        }
+
+        .font-weights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .weight-sample {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .weight-label {
+            font-size: 0.7rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Color Grid */
         .color-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1rem;
         }
 
         .color-card {
-            border-radius: 8px;
+            border-radius: var(--border-radius-md);
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border);
         }
 
         .color-swatch {
-            height: 150px;
+            height: 100px;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 500;
-            font-size: 0.875rem;
+            align-items: flex-end;
+            padding: 0.75rem;
         }
 
         .color-info {
             padding: 1rem;
-            background: #fafafa;
+            background: white;
         }
 
         .color-name {
             font-weight: 600;
+            font-size: 0.9rem;
             margin-bottom: 0.25rem;
-            font-size: 1rem;
         }
 
-        .color-usage {
-            font-size: 0.875rem;
-            color: #666;
-            margin-bottom: 0.5rem;
+        .color-value {
+            font-family: 'Fira Code', monospace, Consolas, Monaco;
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
         }
 
-        .color-hex {
-            font-family: 'Courier New', monospace;
-            font-size: 0.875rem;
-            color: #999;
+        .color-var {
+            font-size: 0.7rem;
+            color: var(--color-accent);
+            margin-top: 0.25rem;
         }
 
-        /* Typography */
-        .type-specimen {
-            margin-bottom: 3rem;
+        /* Gradient Section */
+        .gradient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
 
-        .font-name {
-            font-size: 1.25rem;
+        .gradient-card {
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .gradient-preview {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
             font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .gradient-info {
+            padding: 1rem;
+            background: white;
+        }
+
+        .gradient-name {
+            font-weight: 600;
+            font-size: 0.95rem;
             margin-bottom: 0.5rem;
-            color: #5B3A8F;
         }
 
-        .font-usage {
-            font-size: 0.875rem;
-            color: #666;
-            margin-bottom: 1.5rem;
+        .gradient-code {
+            font-family: 'Fira Code', monospace, Consolas, Monaco;
+            font-size: 0.7rem;
+            color: var(--color-text-secondary);
+            background: var(--color-background-base);
+            padding: 0.5rem;
+            border-radius: var(--border-radius-sm);
+            line-height: 1.5;
         }
 
-        .type-scale {
-            border-left: 3px solid #D4AF37;
-            padding-left: 2rem;
+        /* Button Demos */
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
         }
 
-        .type-example {
-            margin-bottom: 1.5rem;
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 2.5rem;
+            border-radius: var(--border-radius-pill);
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .type-label {
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-purple-bg) 0%, var(--color-teal-bg) 100%);
+            color: var(--color-primary);
+            box-shadow: 0 4px 15px rgba(91, 58, 143, 0.15), 0 1px 3px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(91, 58, 143, 0.15);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--color-teal-bg) 0%, var(--color-purple-bg) 100%);
+            box-shadow: 0 6px 20px rgba(91, 58, 143, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+            border-color: rgba(91, 58, 143, 0.25);
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .button-demo-card {
+            background: var(--color-background-base);
+            border-radius: var(--border-radius-md);
+            padding: 2rem;
+            border: 1px solid var(--color-border);
+        }
+
+        .button-demo-label {
             font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #999;
+            letter-spacing: 0.1em;
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .button-code {
+            margin-top: 1.5rem;
+            font-family: 'Fira Code', monospace, Consolas, Monaco;
+            font-size: 0.75rem;
+            background: var(--color-background-dark);
+            color: #e0d4f5;
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+            overflow-x: auto;
+            line-height: 1.6;
+        }
+
+        .button-code .property {
+            color: #99b5b3;
+        }
+
+        .button-code .value {
+            color: #f5f0ff;
+        }
+
+        /* Shadow Demo */
+        .shadow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .shadow-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius-md);
+            text-align: center;
+        }
+
+        .shadow-label {
+            font-size: 0.8rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
-        .heading-display {
-            font-family: 'Lora', serif;
-            font-size: 3.5rem;
+        .shadow-value {
+            font-family: 'Fira Code', monospace, Consolas, Monaco;
+            font-size: 0.65rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* Spacing Demo */
+        .spacing-demo {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .spacing-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .spacing-label {
+            width: 100px;
+            font-size: 0.8rem;
             font-weight: 600;
-            color: #1a1a1a;
-            line-height: 1.2;
+            color: var(--color-text-secondary);
         }
 
-        .heading-1 {
-            font-family: 'Lora', serif;
-            font-size: 2.5rem;
+        .spacing-bar {
+            height: 24px;
+            background: linear-gradient(135deg, var(--color-purple-bg) 0%, var(--color-teal-bg) 100%);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 0.5rem;
+        }
+
+        .spacing-value {
+            font-family: 'Fira Code', monospace, Consolas, Monaco;
+            font-size: 0.7rem;
+            color: var(--color-primary);
             font-weight: 600;
-            color: #1a1a1a;
-            line-height: 1.3;
         }
 
-        .heading-2 {
-            font-family: 'Lora', serif;
-            font-size: 2rem;
-            font-weight: 500;
-            color: #1a1a1a;
-            line-height: 1.4;
-        }
-
-        .heading-3 {
-            font-family: 'Lora', serif;
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: #1a1a1a;
-            line-height: 1.4;
-        }
-
-        .body-large {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.125rem;
-            font-weight: 400;
-            color: #333;
-            line-height: 1.7;
-        }
-
-        .body-regular {
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            font-weight: 400;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .body-small {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.875rem;
-            font-weight: 400;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Design Principles */
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        /* Border Radius Demo */
+        .radius-grid {
+            display: flex;
+            flex-wrap: wrap;
             gap: 2rem;
-            margin-top: 2rem;
+            align-items: flex-end;
         }
 
-        .principle-card {
-            padding: 2rem;
-            background: #fafafa;
-            border-radius: 8px;
-            border-left: 4px solid #D4AF37;
+        .radius-card {
+            text-align: center;
         }
 
-        .principle-title {
-            font-family: 'Lora', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #5B3A8F;
+        .radius-preview {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
             margin-bottom: 0.75rem;
         }
 
-        .principle-desc {
-            font-size: 0.95rem;
-            color: #666;
-            line-height: 1.6;
+        .radius-label {
+            font-size: 0.75rem;
+            font-weight: 600;
         }
 
-        /* Example Components */
-        .component-showcase {
-            margin-top: 2rem;
+        .radius-value {
+            font-family: 'Fira Code', monospace, Consolas, Monaco;
+            font-size: 0.7rem;
+            color: var(--color-text-secondary);
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: #5B3A8F;
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Dark Section Preview */
+        .dark-section-preview {
+            background: linear-gradient(135deg, var(--color-background-dark-purple) 0%, var(--color-primary) 100%);
+            border-radius: var(--border-radius-lg);
+            padding: 3rem;
             color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(91, 58, 143, 0.2);
+            margin-top: 1.5rem;
         }
 
-        .cta-button:hover {
-            background: #4A2E73;
-            box-shadow: 0 6px 16px rgba(91, 58, 143, 0.3);
-            transform: translateY(-2px);
+        .dark-section-preview h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
-        .cta-button-secondary {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: transparent;
-            color: #5B3A8F;
-            text-decoration: none;
-            border-radius: 50px;
-            border: 2px solid #5B3A8F;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: none;
+        .dark-section-preview p {
+            opacity: 0.85;
+            line-height: 1.7;
         }
 
-        .cta-button-secondary:hover {
-            background: #5B3A8F;
-            color: white;
-            box-shadow: 0 4px 12px rgba(91, 58, 143, 0.2);
-            transform: translateY(-2px);
+        /* Light Gradient Section Preview */
+        .light-gradient-preview {
+            background: linear-gradient(135deg, var(--color-purple-bg) 0%, var(--color-teal-bg) 100%);
+            border-radius: var(--border-radius-lg);
+            padding: 3rem;
+            margin-top: 1.5rem;
         }
 
-        .component-demo {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
+        .light-gradient-preview h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        .light-gradient-preview p {
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .color-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gradient-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header class="header">
         <h1>Nova Sei Press</h1>
-        <p class="subtitle">Design System & Visual Identity</p>
+        <p>Design System Reference</p>
+    </header>
 
-        <!-- Color Palette Section -->
-        <section class="section">
-            <h2 class="section-title">Color Palette</h2>
-            <p class="body-regular">A refined palette that balances sophistication with warmth. The deep royal purple conveys trust and creativity, while the golden accent adds prestige. The expanded neutrals provide flexibility for layouts.</p>
-
-            <div class="color-grid">
-                <div class="color-card">
-                    <div class="color-swatch" style="background: #5B3A8F;">Primary</div>
-                    <div class="color-info">
-                        <div class="color-name">Royal Purple</div>
-                        <div class="color-usage">Primary brand color, headings, CTAs</div>
-                        <div class="color-hex">#5B3A8F</div>
-                    </div>
-                </div>
-
-                <div class="color-card">
-                    <div class="color-swatch" style="background: #4A2E73;">Dark Purple</div>
-                    <div class="color-info">
-                        <div class="color-name">Deep Purple</div>
-                        <div class="color-usage">Hover states, emphasis</div>
-                        <div class="color-hex">#4A2E73</div>
-                    </div>
-                </div>
-
-                <div class="color-card">
-                    <div class="color-swatch" style="background: #D4AF37;">Accent</div>
-                    <div class="color-info">
-                        <div class="color-name">Antique Gold</div>
-                        <div class="color-usage">Accents, highlights, dividers</div>
-                        <div class="color-hex">#D4AF37</div>
-                    </div>
-                </div>
-
-                <div class="color-card">
-                    <div class="color-swatch" style="background: #1a1a1a; color: white;">Text</div>
-                    <div class="color-info">
-                        <div class="color-name">Charcoal</div>
-                        <div class="color-usage">Primary text, headers</div>
-                        <div class="color-hex">#1a1a1a</div>
-                    </div>
-                </div>
-
-                <div class="color-card">
-                    <div class="color-swatch" style="background: #666; color: white;">Secondary</div>
-                    <div class="color-info">
-                        <div class="color-name">Slate Gray</div>
-                        <div class="color-usage">Secondary text, captions</div>
-                        <div class="color-hex">#666666</div>
-                    </div>
-                </div>
-
-                <div class="color-card">
-                    <div class="color-swatch" style="background: #ffffff; border: 1px solid #e0e0e0; color: #1a1a1a;">Background</div>
-                    <div class="color-info">
-                        <div class="color-name">Pure White</div>
-                        <div class="color-usage">Cards, sections, content blocks</div>
-                        <div class="color-hex">#FFFFFF</div>
-                    </div>
-                </div>
-
-                <div class="color-card">
-                    <div class="color-swatch" style="background: #fafafa; border: 1px solid #e0e0e0; color: #1a1a1a;">Base</div>
-                    <div class="color-info">
-                        <div class="color-name">Off-White</div>
-                        <div class="color-usage">Page background, subtle contrast</div>
-                        <div class="color-hex">#FAFAFA</div>
-                    </div>
-                </div>
-
-                <div class="color-card">
-                    <div class="color-swatch" style="background: #f0f0f0; border: 1px solid #e0e0e0; color: #1a1a1a;">Border</div>
-                    <div class="color-info">
-                        <div class="color-name">Light Gray</div>
-                        <div class="color-usage">Borders, dividers, subtle elements</div>
-                        <div class="color-hex">#F0F0F0</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+    <main class="container">
         <!-- Typography Section -->
         <section class="section">
             <h2 class="section-title">Typography</h2>
-
-            <div class="type-specimen">
-                <div class="font-name">Lora</div>
-                <div class="font-usage">Serif — Headings, hero text, section titles</div>
-                <p class="body-regular">A contemporary serif that's highly readable with brushed curves and moderate contrast. Designed specifically for screen readability while maintaining elegance. Perfect for a publishing house that values both tradition and modernity.</p>
-
-                <div class="type-scale">
-                    <div class="type-example">
-                        <div class="type-label">Display / Hero</div>
-                        <div class="heading-display">Crafting Stories That Last</div>
-                    </div>
-                    <div class="type-example">
-                        <div class="type-label">Heading 1</div>
-                        <div class="heading-1">Professional Publishing Services</div>
-                    </div>
-                    <div class="type-example">
-                        <div class="type-label">Heading 2</div>
-                        <div class="heading-2">Bringing Your Vision to Life</div>
-                    </div>
-                    <div class="type-example">
-                        <div class="type-label">Heading 3</div>
-                        <div class="heading-3">Our Approach to Excellence</div>
+            <div class="typography-demo">
+                <div class="font-card">
+                    <div class="font-label">Headings - Lora (Serif)</div>
+                    <div class="font-lora font-sample-large">The Art of Beautiful Publishing</div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <span class="weight-label">400 Regular</span>
+                            <span class="font-lora" style="font-size: 1.25rem; font-weight: 400;">Lora Regular</span>
+                        </div>
+                        <div class="weight-sample">
+                            <span class="weight-label">500 Medium</span>
+                            <span class="font-lora" style="font-size: 1.25rem; font-weight: 500;">Lora Medium</span>
+                        </div>
+                        <div class="weight-sample">
+                            <span class="weight-label">600 SemiBold</span>
+                            <span class="font-lora" style="font-size: 1.25rem; font-weight: 600;">Lora SemiBold</span>
+                        </div>
+                        <div class="weight-sample">
+                            <span class="weight-label">700 Bold</span>
+                            <span class="font-lora" style="font-size: 1.25rem; font-weight: 700;">Lora Bold</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="type-specimen">
-                <div class="font-name">Inter</div>
-                <div class="font-usage">Sans-serif — Body text, navigation, UI elements</div>
-                <p class="body-regular">A modern, highly legible sans-serif designed specifically for screens. Provides excellent readability at all sizes while maintaining a clean, professional appearance.</p>
-
-                <div class="type-scale">
-                    <div class="type-example">
-                        <div class="type-label">Body Large / Lead</div>
-                        <div class="body-large">Nova Sei Press partners with authors to transform manuscripts into polished, professionally published works. Our comprehensive services cover every step of the publishing journey.</div>
-                    </div>
-                    <div class="type-example">
-                        <div class="type-label">Body Regular</div>
-                        <div class="body-regular">Whether you're a first-time author or a seasoned writer, we provide personalized support tailored to your unique needs and goals. Our team of experienced editors and publishing consultants brings decades of industry expertise to every project.</div>
-                    </div>
-                    <div class="type-example">
-                        <div class="type-label">Body Small / Caption</div>
-                        <div class="body-small">Available for projects of all sizes • Flexible timelines to match your schedule • Professional quality guaranteed</div>
+                <div class="font-card">
+                    <div class="font-label">Body Text - Inter (Sans-Serif)</div>
+                    <div class="font-inter font-sample-medium">Clean and modern body typography</div>
+                    <p class="font-inter font-sample-body" style="margin-top: 0.75rem;">
+                        Nova Sei Press brings your words to life with professional-quality book publishing services.
+                        We believe every author deserves a beautifully crafted book that reflects their unique voice and vision.
+                    </p>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <span class="weight-label">300 Light</span>
+                            <span class="font-inter" style="font-size: 1.1rem; font-weight: 300;">Inter Light</span>
+                        </div>
+                        <div class="weight-sample">
+                            <span class="weight-label">400 Regular</span>
+                            <span class="font-inter" style="font-size: 1.1rem; font-weight: 400;">Inter Regular</span>
+                        </div>
+                        <div class="weight-sample">
+                            <span class="weight-label">500 Medium</span>
+                            <span class="font-inter" style="font-size: 1.1rem; font-weight: 500;">Inter Medium</span>
+                        </div>
+                        <div class="weight-sample">
+                            <span class="weight-label">600 SemiBold</span>
+                            <span class="font-inter" style="font-size: 1.1rem; font-weight: 600;">Inter SemiBold</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Design Principles Section -->
+        <!-- Primary Colors -->
         <section class="section">
-            <h2 class="section-title">Design Principles</h2>
-
-            <div class="principles-grid">
-                <div class="principle-card">
-                    <div class="principle-title">Spacious & Light</div>
-                    <p class="principle-desc">Generous whitespace and breathing room create a sense of calm professionalism. Content never feels cramped or overwhelming.</p>
+            <h2 class="section-title">Primary Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #5b3a8f;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary</div>
+                        <div class="color-value">#5b3a8f</div>
+                        <div class="color-var">--color-primary</div>
+                    </div>
                 </div>
-
-                <div class="principle-card">
-                    <div class="principle-title">Warm & Trustworthy</div>
-                    <p class="principle-desc">The color palette and typography work together to feel both professional and approachable, building confidence without intimidation.</p>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #4a2e73;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Dark</div>
+                        <div class="color-value">#4a2e73</div>
+                        <div class="color-var">--color-primary-dark</div>
+                    </div>
                 </div>
-
-                <div class="principle-card">
-                    <div class="principle-title">Refined Simplicity</div>
-                    <p class="principle-desc">Clean layouts without unnecessary decoration. Every element serves a purpose, avoiding cookie-cutter template feels.</p>
-                </div>
-
-                <div class="principle-card">
-                    <div class="principle-title">Smooth Interactions</div>
-                    <p class="principle-desc">Subtle transitions and smooth scrolling create a polished, intentional experience that feels crafted, not rushed.</p>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #7b5aaf;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Light</div>
+                        <div class="color-value">#7b5aaf</div>
+                        <div class="color-var">--color-primary-light</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Component Examples Section -->
+        <!-- Accent Colors -->
         <section class="section">
-            <h2 class="section-title">Component Examples</h2>
-            <p class="body-regular">Preview of how design elements come together in actual components.</p>
-
-            <div class="component-showcase">
-                <div class="type-label">Call-to-Action Buttons</div>
-                <div class="component-demo">
-                    <a href="#" class="cta-button">Get Started Today</a>
-                    <a href="#" class="cta-button-secondary">Learn More</a>
+            <h2 class="section-title">Accent Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #7a9e9b;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Accent (Teal)</div>
+                        <div class="color-value">#7a9e9b</div>
+                        <div class="color-var">--color-accent</div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="component-showcase" style="margin-top: 3rem;">
-                <div class="type-label">Service Card Example</div>
-                <div style="max-width: 500px; padding: 2rem; background: white; border-radius: 8px; border-top: 4px solid #D4AF37; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
-                    <h3 style="font-family: 'Lora', serif; font-size: 1.75rem; color: #5B3A8F; margin-bottom: 1rem;">Professional Editing</h3>
-                    <p class="body-regular">Our experienced editors refine your manuscript with meticulous attention to detail, enhancing clarity, flow, and impact while preserving your unique voice.</p>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #99b5b3;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Accent Light</div>
+                        <div class="color-value">#99b5b3</div>
+                        <div class="color-var">--color-accent-light</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Rationale Section -->
+        <!-- Text Colors -->
         <section class="section">
-            <h2 class="section-title">Design Rationale</h2>
-
-            <div style="background: #f9f9f9; padding: 2rem; border-radius: 8px; border-left: 4px solid #5B3A8F;">
-                <h3 style="font-family: 'Lora', serif; font-size: 1.5rem; color: #5B3A8F; margin-bottom: 1rem;">Why This Palette?</h3>
-                <p class="body-regular" style="margin-bottom: 1rem;">
-                    <strong>Royal Purple (#5B3A8F):</strong> Conveys creativity, wisdom, and sophistication — perfect for a publishing business. It's distinctive without being overwhelming, establishing brand recognition while maintaining professionalism.
-                </p>
-                <p class="body-regular" style="margin-bottom: 1rem;">
-                    <strong>Antique Gold (#D4AF37):</strong> Adds warmth and prestige. This muted gold feels established and trustworthy rather than flashy. It pairs beautifully with purple and provides elegant accents.
-                </p>
-                <p class="body-regular">
-                    <strong>Neutral Grays:</strong> The expanded neutral palette (charcoal to off-white) provides hierarchy and breathing room. This allows the purple and gold to make statements without overwhelming the design.
-                </p>
-            </div>
-
-            <div style="background: #f9f9f9; padding: 2rem; border-radius: 8px; border-left: 4px solid #D4AF37; margin-top: 2rem;">
-                <h3 style="font-family: 'Lora', serif; font-size: 1.5rem; color: #5B3A8F; margin-bottom: 1rem;">Why These Fonts?</h3>
-                <p class="body-regular" style="margin-bottom: 1rem;">
-                    <strong>Lora:</strong> A contemporary serif specifically optimized for screen readability. Its brushed curves and moderate contrast make it highly legible at all sizes while maintaining warmth and sophistication. Unlike traditional serifs, Lora feels modern and approachable while still honoring literary tradition.
-                </p>
-                <p class="body-regular">
-                    <strong>Inter:</strong> Exceptional readability and modern feel. It's neutral enough to let content shine while maintaining personality. Pairs perfectly with Cormorant's classical elegance, creating sophisticated contrast between headings and body text.
-                </p>
+            <h2 class="section-title">Text Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #1a1a1a;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Text Primary</div>
+                        <div class="color-value">#1a1a1a</div>
+                        <div class="color-var">--color-text-primary</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #666666;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Text Secondary</div>
+                        <div class="color-value">#666666</div>
+                        <div class="color-var">--color-text-secondary</div>
+                    </div>
+                </div>
             </div>
         </section>
-    </div>
+
+        <!-- Background Colors -->
+        <section class="section">
+            <h2 class="section-title">Background Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #ffffff; border-bottom: 1px solid #f0f0f0;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Background</div>
+                        <div class="color-value">#ffffff</div>
+                        <div class="color-var">--color-background</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #fafafa; border-bottom: 1px solid #f0f0f0;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Background Base</div>
+                        <div class="color-value">#fafafa</div>
+                        <div class="color-var">--color-background-base</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #2a1f3d;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Background Dark</div>
+                        <div class="color-value">#2a1f3d</div>
+                        <div class="color-var">--color-background-dark</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #3d2e5a;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Dark Purple</div>
+                        <div class="color-value">#3d2e5a</div>
+                        <div class="color-var">--color-background-dark-purple</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #f5f0ff;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Purple Background</div>
+                        <div class="color-value">#f5f0ff</div>
+                        <div class="color-var">--color-purple-bg</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #e6faf8;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Teal Background</div>
+                        <div class="color-value">#e6faf8</div>
+                        <div class="color-var">--color-teal-bg</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #f0f0f0;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Border</div>
+                        <div class="color-value">#f0f0f0</div>
+                        <div class="color-var">--color-border</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status Colors -->
+        <section class="section">
+            <h2 class="section-title">Status Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: linear-gradient(135deg, #48a14d 0%, #66bb6a 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Success</div>
+                        <div class="color-value">#48a14d - #66bb6a</div>
+                        <div class="color-var">Gradient</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: linear-gradient(135deg, #e63946 0%, #f77f88 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Error</div>
+                        <div class="color-value">#e63946 - #f77f88</div>
+                        <div class="color-var">Gradient</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gradients -->
+        <section class="section">
+            <h2 class="section-title">Gradients</h2>
+            <div class="gradient-grid">
+                <div class="gradient-card">
+                    <div class="gradient-preview" style="background: linear-gradient(135deg, #7b5aaf 0%, #99b5b3 100%);">
+                        Hero Title
+                    </div>
+                    <div class="gradient-info">
+                        <div class="gradient-name">Hero Title Gradient</div>
+                        <div class="gradient-code">
+                            linear-gradient(135deg,<br>
+                            &nbsp;&nbsp;#7b5aaf 0%,<br>
+                            &nbsp;&nbsp;#99b5b3 100%)
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-card">
+                    <div class="gradient-preview" style="background: linear-gradient(135deg, #5b3a8f 0%, #7a9e9b 100%);">
+                        Section Title
+                    </div>
+                    <div class="gradient-info">
+                        <div class="gradient-name">Section Title Gradient</div>
+                        <div class="gradient-code">
+                            linear-gradient(135deg,<br>
+                            &nbsp;&nbsp;#5b3a8f 0%,<br>
+                            &nbsp;&nbsp;#7a9e9b 100%)
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-card">
+                    <div class="gradient-preview" style="background: linear-gradient(135deg, #3d2e5a 0%, #5b3a8f 100%);">
+                        Dark Section
+                    </div>
+                    <div class="gradient-info">
+                        <div class="gradient-name">Dark Section Background</div>
+                        <div class="gradient-code">
+                            linear-gradient(135deg,<br>
+                            &nbsp;&nbsp;#3d2e5a 0%,<br>
+                            &nbsp;&nbsp;#5b3a8f 100%)
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-card">
+                    <div class="gradient-preview" style="background: linear-gradient(135deg, #f5f0ff 0%, #e6faf8 100%); color: #5b3a8f;">
+                        Light Gradient
+                    </div>
+                    <div class="gradient-info">
+                        <div class="gradient-name">Light Section / Button</div>
+                        <div class="gradient-code">
+                            linear-gradient(135deg,<br>
+                            &nbsp;&nbsp;#f5f0ff 0%,<br>
+                            &nbsp;&nbsp;#e6faf8 100%)
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-card">
+                    <div class="gradient-preview" style="background: linear-gradient(135deg, #5b3a8f 0%, #7b5aaf 100%);">
+                        Logo
+                    </div>
+                    <div class="gradient-info">
+                        <div class="gradient-name">Navigation Logo</div>
+                        <div class="gradient-code">
+                            linear-gradient(135deg,<br>
+                            &nbsp;&nbsp;#5b3a8f 0%,<br>
+                            &nbsp;&nbsp;#7b5aaf 100%)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="section">
+            <h2 class="section-title">Gradient Button</h2>
+            <div class="button-demo-card">
+                <div class="button-demo-label">Primary Button (Hover to see effect)</div>
+                <div class="button-grid">
+                    <button class="btn btn-primary">Get Started Today</button>
+                    <button class="btn btn-primary">Submit</button>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+                <div class="button-code">
+<span class="property">background:</span> <span class="value">linear-gradient(135deg, #f5f0ff 0%, #e6faf8 100%);</span><br>
+<span class="property">color:</span> <span class="value">#5b3a8f;</span><br>
+<span class="property">border:</span> <span class="value">1px solid rgba(91, 58, 143, 0.15);</span><br>
+<span class="property">border-radius:</span> <span class="value">50px;</span><br>
+<span class="property">padding:</span> <span class="value">0.875rem 2.5rem;</span><br>
+<span class="property">font-weight:</span> <span class="value">600;</span><br>
+<span class="property">box-shadow:</span> <span class="value">0 4px 15px rgba(91, 58, 143, 0.15);</span><br>
+<br>
+<span style="color: #7a9e9b;">/* Hover state reverses gradient */</span><br>
+<span class="property">background:</span> <span class="value">linear-gradient(135deg, #e6faf8 0%, #f5f0ff 100%);</span><br>
+<span class="property">transform:</span> <span class="value">translateY(-3px);</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Previews -->
+        <section class="section">
+            <h2 class="section-title">Section Backgrounds</h2>
+            <div class="dark-section-preview">
+                <h3>Dark Section Preview</h3>
+                <p>This gradient is used for sections like the About section, creating a rich, immersive background that helps content stand out with elegant contrast.</p>
+            </div>
+            <div class="light-gradient-preview">
+                <h3>Light Gradient Preview</h3>
+                <p>This subtle gradient combines light purple and teal tones, perfect for testimonial sections and other content areas that need visual interest without overwhelming the text.</p>
+            </div>
+        </section>
+
+        <!-- Shadows -->
+        <section class="section">
+            <h2 class="section-title">Shadows</h2>
+            <div class="shadow-grid">
+                <div class="shadow-card" style="box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);">
+                    <div class="shadow-label">Small</div>
+                    <div class="shadow-value">0 2px 8px rgba(0,0,0,0.05)</div>
+                </div>
+                <div class="shadow-card" style="box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);">
+                    <div class="shadow-label">Medium</div>
+                    <div class="shadow-value">0 4px 16px rgba(0,0,0,0.1)</div>
+                </div>
+                <div class="shadow-card" style="box-shadow: 0 8px 24px rgba(91, 58, 143, 0.15);">
+                    <div class="shadow-label">Large (Purple)</div>
+                    <div class="shadow-value">0 8px 24px rgba(91,58,143,0.15)</div>
+                </div>
+                <div class="shadow-card" style="box-shadow: 0 12px 32px rgba(91, 58, 143, 0.2);">
+                    <div class="shadow-label">XL (Purple)</div>
+                    <div class="shadow-value">0 12px 32px rgba(91,58,143,0.2)</div>
+                </div>
+                <div class="shadow-card" style="box-shadow: 0 8px 24px rgba(122, 158, 155, 0.25);">
+                    <div class="shadow-label">Accent (Teal)</div>
+                    <div class="shadow-value">0 8px 24px rgba(122,158,155,0.25)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spacing -->
+        <section class="section">
+            <h2 class="section-title">Spacing Scale</h2>
+            <div class="spacing-demo">
+                <div class="spacing-row">
+                    <div class="spacing-label">XS</div>
+                    <div class="spacing-bar" style="width: 32px;">
+                        <span class="spacing-value">0.5rem</span>
+                    </div>
+                </div>
+                <div class="spacing-row">
+                    <div class="spacing-label">SM</div>
+                    <div class="spacing-bar" style="width: 48px;">
+                        <span class="spacing-value">0.75rem</span>
+                    </div>
+                </div>
+                <div class="spacing-row">
+                    <div class="spacing-label">MD</div>
+                    <div class="spacing-bar" style="width: 96px;">
+                        <span class="spacing-value">1.5rem</span>
+                    </div>
+                </div>
+                <div class="spacing-row">
+                    <div class="spacing-label">LG</div>
+                    <div class="spacing-bar" style="width: 160px;">
+                        <span class="spacing-value">2.5rem</span>
+                    </div>
+                </div>
+                <div class="spacing-row">
+                    <div class="spacing-label">XL</div>
+                    <div class="spacing-bar" style="width: 224px;">
+                        <span class="spacing-value">3.5rem</span>
+                    </div>
+                </div>
+                <div class="spacing-row">
+                    <div class="spacing-label">XXL</div>
+                    <div class="spacing-bar" style="width: 320px;">
+                        <span class="spacing-value">5rem</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Border Radius -->
+        <section class="section">
+            <h2 class="section-title">Border Radius</h2>
+            <div class="radius-grid">
+                <div class="radius-card">
+                    <div class="radius-preview" style="border-radius: 8px;"></div>
+                    <div class="radius-label">Small</div>
+                    <div class="radius-value">8px</div>
+                </div>
+                <div class="radius-card">
+                    <div class="radius-preview" style="border-radius: 12px;"></div>
+                    <div class="radius-label">Medium</div>
+                    <div class="radius-value">12px</div>
+                </div>
+                <div class="radius-card">
+                    <div class="radius-preview" style="border-radius: 20px;"></div>
+                    <div class="radius-label">Large</div>
+                    <div class="radius-value">20px</div>
+                </div>
+                <div class="radius-card">
+                    <div class="radius-preview" style="border-radius: 50px;"></div>
+                    <div class="radius-label">Pill</div>
+                    <div class="radius-value">50px</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Nova Sei Press Design Reference</p>
+    </footer>
 </body>
 </html>
